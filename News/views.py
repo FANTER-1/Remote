@@ -4,9 +4,9 @@ from .filters import NewsFilter
 
 from .models import News
 from django.template.defaulttags import register
-from django.core.paginator import Paginator
-from django.views.generic import ListView
-
+from django.views.generic import ListView, UpdateView
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.models import Group
 
 @register.filter
 def censor(value):
@@ -39,3 +39,21 @@ class NewsSearchView(FilterView):
     model = News
     template_name = 'news_search.html'
     filterset_class = NewsFilter
+
+class ProfileEditView(LoginRequiredMixin, UpdateView):
+    ...
+
+Group.objects.create(name='common')
+Group.objects.create(name='authors')
+
+
+
+
+
+
+
+
+
+
+
+
