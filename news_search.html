@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Поиск новостей</h1>
+    <form method="get">
+        {{ filter.form.as_p }}
+        <button type="submit">Поиск</button>
+    </form>
+
+    {% if filter.qs %}
+        <h2>Результаты поиска</h2>
+        {% for news in filter.qs %}
+            <div>{{ news.title }}</div>
+            <div>{{ news.author }}</div>
+            <div>{{ news.date_added }}</div>
+        {% empty %}
+            <p>Нет результатов</p>
+        {% endfor %}
+    {% endif %}
+{% endblock %}
