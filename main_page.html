@@ -1,0 +1,9 @@
+{% load cache %}
+
+{% cache 300 news_block %}
+    <!-- Контент новостей -->
+{% endcache %}
+
+{% cache 60 main_page_block cache='main_page_cache' %}
+    <!-- Контент главной страницы -->
+{% endcache %}
