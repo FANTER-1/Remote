@@ -1,7 +1,0 @@
-<h2>Еженедельная рассылка новостей</h2>
-{% for news_item in news %}
-    <h3>{{ news_item.title }}</h3>
-    <p>{{ news_item.content }}</p>
-    <p>Дата публикации: {{ news_item.pub_date|date:"d.m.Y" }}</p>
-    <hr>
-{% endfor %}
