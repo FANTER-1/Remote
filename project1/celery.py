@@ -15,4 +15,4 @@ app.autodiscover_tasks(lambda: settings.INSTALLED_APPS)
 
 @app.on_after_finalize.connect
 def setup_periodic_tasks(sender, **kwargs):
-    sender.add_periodic_task(7*24*3600, send_notification.s('recipient@example.com', 'Weekly notification'), name='send-notification')
+    sender.add_periodic_task(7*24*3600, send_notification.s('nazarenko.vitaliy111cool2016@mail.ru', 'Weekly notification'), name='send-notification')
