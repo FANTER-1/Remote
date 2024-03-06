@@ -13,4 +13,4 @@ def hello():
 
 @task
 def send_notification(email, message):
-    send_mail('Notification', message, 'from@example.com', [email])
+    send_mail('Notification', message, 'nazarenko.vitaliy111cool2016@mail.ru', [email])
