@@ -37,10 +37,10 @@ class Command(BaseCommand):
         # добавляем работу нашему задачнику
         scheduler.add_job(
             my_job,
-            trigger=CronTrigger(second="*/10")
-        id = 'my_job',
-        max_instances = 1,
-        replace_existing = True,
+            trigger=CronTrigger(second="*/10"),
+        id= 'my_job',
+        max_instances= 1,
+        replace_existing= True,
         )
         logger.info("Added job 'my_job'.")
 
