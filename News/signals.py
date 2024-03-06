@@ -34,4 +34,4 @@ def notify_managers_appointment_canceled(sender, instance, **kwargs):
 def article_created(sender, instance, created, **kwargs):
     if created:
         message = 'An article has been created: {}'.format(instance.title)
-        send_notification.delay('recipient@example.com', message)
+        send_notification.delay('nazarenko.vitaliy111cool2016@mail.ru', message)
